@@ -6,7 +6,7 @@ import Header from './src/components/header';
 // Create a component.
 // Component nesting: Placing one component inside of another.
 const App = () => (
-  <Header />
+  <Header headerText={'Albums'} />
 );
 
 
