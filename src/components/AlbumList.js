@@ -5,6 +5,9 @@ import axios from 'axios';
 
 // We are borrowing functionality from Component class.
 class AlbumList extends Component {
+  //setting the initial state to empty
+  state = { albums: [] };
+
   //From ReactNative documentation: 
     //ComponentWillMount() is invoked immediately before mounting occurs. 
     //It is called before render(), therefore setting state in this method will not trigger a re-rendering. 
@@ -13,9 +16,14 @@ class AlbumList extends Component {
   //componentWillMount initiates some loading of data or HTTP request.   
   componentWillMount() {
     axios.get('https://rallycoding.herokuapp.com/api/music_albums')
-      .then(response => console.log(response));
+      .then(response => this.setState({ albums: response.data }));
   }
+  //After doing the http request, we set the state to be the response that we get from the api.
+  //To modify state, you need to use this.setState
+
   render() {
+    console.log(this.state);
+    
     return (
       <View>
         <Text>Album List</Text>
