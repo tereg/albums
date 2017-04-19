@@ -45,13 +45,15 @@ import Button from './Button';
           source={{ uri: image }} 
         />
       </CardSection>
-      
+
       <CardSection>
-        <Button />
+        <Button onPress={() => console.log(title)} />
       </CardSection>
     </Card>
   );
  };
+//onPress above needs to be wired up inside of the Button
+
 
  const styles = {
   headerContentStyle: {
