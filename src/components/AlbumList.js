@@ -21,12 +21,19 @@ class AlbumList extends Component {
   //After doing the http request, we set the state to be the response that we get from the api.
   //To modify state, you need to use this.setState
 
+  //Helper method to generate list of albums
+  renderAlbums() {
+    return this.state.albums.map(album => 
+      <Text key={album.title}>{album.title}</Text>
+    );
+  }
+
   render() {
     console.log(this.state);
     
     return (
       <View>
-        <Text>Album List</Text>
+        {this.renderAlbums()}
       </View>
     );
   }
