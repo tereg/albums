@@ -1,7 +1,8 @@
 // We are getting the React library and the Component class from it.
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import axios from 'axios';
+import AlbumDetail from './AlbumDetail';
 
 // We are borrowing functionality from Component class.
 class AlbumList extends Component {
@@ -22,9 +23,11 @@ class AlbumList extends Component {
   //To modify state, you need to use this.setState
 
   //Helper method to generate list of albums
+  //We want to pass the album down to AlbumDetail as a prop.
+  //Inside of AlbumDetail, I will have a prop called props.album and that will be equal to my album.
   renderAlbums() {
     return this.state.albums.map(album => 
-      <Text key={album.title}>{album.title}</Text>
+      <AlbumDetail key={album.title} album={album} />
     );
   }
 
