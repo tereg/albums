@@ -5,8 +5,9 @@ import Header from './src/components/header';
 import AlbumList from './src/components/AlbumList';
 // Create a component.
 // Component nesting: Placing one component inside of another.
+// flex: 1 below says 'please expand this component to fill the entire content area of the device'
 const App = () => (
-  <View>
+  <View style={{ flex: 1 }}>
     <Header headerText={'Albums'} />
     <AlbumList />
   </View>

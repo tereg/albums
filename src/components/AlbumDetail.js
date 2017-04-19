@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, View, Image } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
-
+import Button from './Button';
 
 //This is going to be a functional component
   //because we do not need access to lifecycle methods
@@ -38,11 +38,16 @@ import CardSection from './CardSection';
           <Text>{artist}</Text>
         </View>
       </CardSection>
+
       <CardSection>
         <Image 
           style={imageStyle} 
           source={{ uri: image }} 
         />
+      </CardSection>
+      
+      <CardSection>
+        <Button />
       </CardSection>
     </Card>
   );
