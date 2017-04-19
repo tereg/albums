@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image, Linking } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
 import Button from './Button';
@@ -15,7 +15,7 @@ import Button from './Button';
   //to come from the album object. This is a good approach
   //whenever you start making multiple references to your props object. 
 
-  const { title, artist, thumbnail_image, image } = album;
+  const { title, artist, thumbnail_image, image, url } = album;
   const { 
     thumbnailStyle, 
     headerContentStyle,
@@ -47,7 +47,7 @@ import Button from './Button';
       </CardSection>
 
       <CardSection>
-        <Button onPress={() => console.log(title)} />
+        <Button onPress={() => Linking.openURL(url)} />
       </CardSection>
     </Card>
   );
