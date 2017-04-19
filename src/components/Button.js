@@ -4,14 +4,15 @@ import { Text, TouchableOpacity } from 'react-native';
 //The onPress in the line below is equal to the onPress in the 
 //fat arrow function in AlbumDetail. It's not the same as the one
 //in TouchableOpacity below.
-const Button = ({ onPress }) => {
+//onPress and children are destructured from props
+const Button = ({ onPress, children }) => {
   const { textStyle, buttonStyle } = styles;
 
 //onPress handler is called whenever the user presses the button
   return (
     <TouchableOpacity onPress={onPress} style={buttonStyle}>
       <Text style={textStyle}>
-        Click me!!!
+        {children}
       </Text>
     </TouchableOpacity>
   );
