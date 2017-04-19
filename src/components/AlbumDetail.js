@@ -14,5 +14,4 @@ import { View, Text } from 'react-native';
   );
  };
 
- export default AlbumDetail; 
- 
+export default AlbumDetail; 
