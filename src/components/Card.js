@@ -3,6 +3,9 @@ import { View } from 'react-native';
 
 //The sole purpose of this component is 
 //to make something with some nice styling that looks like a card.
+
+//If we pass one component to another, it will show up in the parent 
+//as props.children. We have to provide a reference to props.children somewhere. 
 const Card = (props) => {
   return (
     <View style={styles.containerStyle}>
@@ -24,6 +27,7 @@ const styles = {
     shadowRadius: 2,
     elevation: 1,
     marginLeft: 5,
+    marginRight: 5,
     marginTop: 10
   }
 };

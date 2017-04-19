@@ -1,6 +1,8 @@
 import React from 'react';
 import { Text } from 'react-native';
 import Card from './Card';
+import CardSection from './CardSection';
+
 
 //This is going to be a functional component
   //because we do not need access to lifecycle methods
@@ -10,7 +12,9 @@ import Card from './Card';
  const AlbumDetail = (props) => {
   return (
     <Card>
-      <Text>{props.album.title}</Text>
+      <CardSection>
+        <Text>{props.album.title}</Text>
+      </CardSection>
     </Card>
   );
  };
