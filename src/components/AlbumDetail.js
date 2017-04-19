@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { Text } from 'react-native';
+import Card from './Card';
 
 //This is going to be a functional component
   //because we do not need access to lifecycle methods
@@ -8,9 +9,9 @@ import { View, Text } from 'react-native';
 //Receive props from AlbumList
  const AlbumDetail = (props) => {
   return (
-    <View>
+    <Card>
       <Text>{props.album.title}</Text>
-    </View>
+    </Card>
   );
  };
 

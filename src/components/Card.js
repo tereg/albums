@@ -3,9 +3,10 @@ import { View } from 'react-native';
 
 //The sole purpose of this component is 
 //to make something with some nice styling that looks like a card.
-const Card = () => {
+const Card = (props) => {
   return (
-    <View style={styles.containerStyle>
+    <View style={styles.containerStyle}>
+      {props.children}
     </View>
   );
 };
